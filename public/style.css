@@ -1,0 +1,279 @@
+body{
+   margin: 0 auto;
+   font-family: "Open Sans Condensed";
+   font-size: 20px;
+   
+} 
+
+ #page{
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+/*--------------------Голова------------------------*/
+#head{
+    width: 100%;
+    height: 200px;
+    background: #696969  ;
+    position: relative;
+    border-top-right-radius: 200px;
+    transition: all 0.7s linear;
+}
+
+#title{
+    position: absolute;
+    left: 200px;
+    top: 20%;
+    font-family: 'Comfortaa', cursive;
+
+    font-size: 50px;
+     -moz-animation: anim 5s ease;
+    -webkit-animation: anim  5s ease;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+#title:hover {
+  -moz-animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+}
+
+#head img{
+    height: 80%;
+    padding: 20px;
+    transition: all 0.7s linear;
+}
+
+
+@media (max-width: 460px) {
+ #head img{
+     display: block;
+     margin: 0 auto;
+     padding: 0;
+     
+ }
+ #head{
+      border-top-right-radius: 0px;
+ }
+ #futter{
+     border-bottom-left-radius: 0px;
+ }
+    #title{
+    display: none;
+}
+}
+
+#content{
+    float: right;
+    background: #696969;
+    width: 80%;
+    height: 100%;
+}
+
+#futter{
+    float: left;
+    width: 100%;
+    height: 200px;
+    background: #a9a9a9;
+    position: relative;
+    border-bottom-left-radius: 200px;
+    transition: all 0.7s linear
+}
+
+/*------------------------Меню--------------------------*/
+#menu{
+    width: 100%;
+ 
+    background: #a9a9a9;
+    border-bottom: 3px solid white;
+}
+
+#menu a, #menu:before, #menu div:before {
+    display: inline-block;
+    background: #a9a9a9; 
+    padding: 10px 0;
+    color: white;
+    text-align: center;
+     
+    transition: all 0.7s linear;
+ }
+#bla{
+    border: 1px solid black;
+}
+#menu a {
+    border-top: 3px solid;
+    line-height: 50px;
+    width: 25%; 
+    background: #a9a9a9;  
+    text-decoration: none;
+}
+#menu a:hover {
+    border-top: 3px solid black;
+    background: #696969; 
+}
+@media (max-width: 460px) {
+  #menu a, #menu:before, #menu div:before {
+       width: 100%;
+       line-height: 50px;
+  }
+  #menu:before {
+       border-top: 3px solid;
+       content: "Меню";
+  }
+  #menu:focus:before {
+        content: none;
+  }
+  #menu:focus div:before {
+        content: "Згорнути меню";
+        border-top: 3px solid;
+  }
+  #menu:not(:focus) div:not(:active) { 
+        display: none;
+        transition: all 0.7s linear;
+  }
+}
+
+/*----------------------Пошук--------------------------------*/
+#search{
+    position: absolute;
+    margin: 0 auto;
+    height: 30px;
+    width: 300px;
+    border: none;
+    outline: none; 
+    bottom: 5px;
+    right: 5px;
+    font-family: "Open Sans Condensed";
+    font-size: 25px;
+    border-bottom: 5px solid #2aad29;
+    transition-property: border-color;
+    transition: all 0.7s linear;
+    background-color: white;
+}
+#search:focus{
+    border-color: yellow;
+    cursor: pointer;
+}
+
+@media (max-width: 460px) {
+    #search{
+        text-align: center;
+        bottom: 0px;
+        right: 0px;
+        width: 100%;
+    }
+  
+}
+
+@media (max-width: 580px) {
+    #sidebar{
+        display: none;
+    }
+    #content{
+        width: 100%;
+    }
+}
+
+
+@keyframes anim {
+    0% { 
+        color:black; 
+    }
+    100% { 
+        color:white; 
+    }
+  }
+  
+  
+  
+  
+  /*------------------sidebar----------------------*/
+  
+  #sidebar{
+    float: left;
+    text-align: center;
+    padding-left: 0px;
+    background: #a9a9a9;
+    width: 20%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    
+}
+
+#ava {
+    background: white;
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 30px;
+  
+}
+
+#ava img{
+      max-height: 100%;
+}
+#sidebar p{
+    margin: 0;
+}
+#sidebar ul{
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+    text-align: left;
+    list-style-type: none;
+    margin-left: 0; 
+    padding-left: 0;
+    background: #696969;
+    
+}
+#sidebar li{
+   padding: 5px;
+   transition: all 0.3s linear;
+   
+}
+#sidebar li:hover{
+    background: #a9a9a9;
+    border-right:5px solid white;;
+}
+@media (max-width: 950px) {
+  #ava{
+      display: none;
+  }
+}
+
+
+.post{
+    background: white;
+    margin:0 auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+    max-width: 1000px;
+    transition: all 0.7s ease-in;
+}
+
+@media (max-width: 460px) {
+    .post{
+        font-size: 15px;
+    }
+}
+
+
+#conteiner{
+    position: relative;
+    bottom: 0;
+    overflow: hidden; 
+}
+
+#futter p{
+    position: absolute;
+    color: wheat;
+    bottom: 5px;
+    right: 5px;
+}
+
+
+
+.register{
+    text-align: center;
+}

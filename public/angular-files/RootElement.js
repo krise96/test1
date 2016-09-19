@@ -1,0 +1,28 @@
+(function() {
+    var module=angular.module('MainModule');
+    
+class rootComponentController {
+    constructor() {}
+}
+
+rootComponentController.$inject = [];
+
+     module.component('rootElement', {
+            controller: rootComponentController,
+            templateUrl: './angular-files/templates/MainPage.html',
+            $routeConfig: [{
+                path: '/',
+                name: 'Home',
+                component: 'home',
+            },{
+                path: '/register',
+                name: 'Register',
+                component: 'register',
+            },
+            {
+                path: '/**',
+                name: 'NotFound',
+                component: 'notFound'
+            }]  
+    });
+})();
